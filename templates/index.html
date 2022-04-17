@@ -34,10 +34,216 @@
           <h1>Methadone Poison Prediction</h1>
         </div>
       </div>
-
+      <div class="col-12 col-sm-12 col-md-7 col-lg-7">
+        {% if pred != "a" and pred != "Invalid File"%}
+        <h3 style="text-align: left">Predection is: {{pred}}</h3>
+        {% elif pred == "Invalid File"%}
+        <h3 style="text-align: left">{{pred}}</h3>
+        {% endif %}
+      </div>
       <form action="result" method="post" enctype="multipart/form-data">
         <div class="col-12 col-sm-12 col-md-7 col-lg-7">
-          <input type="file" name="file" required />
+          <label for="value1" style="text-align: left">Coma</label>
+          <br />
+          <input
+            type="number"
+            name="value1"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+          <br />
+          <br />
+          <label for="value2" style="text-align: left"
+            >Respiratory Depression</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value2"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value3" style="text-align: left"
+            >Respiratory Arrest</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value3"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value4" style="text-align: left"
+            >Conduction Disturbance</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value4"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value5" style="text-align: left">Hypotension</label>
+          <br />
+          <input
+            type="number"
+            name="value5"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value6" style="text-align: left">Asystole</label>
+          <br />
+          <input
+            type="number"
+            name="value6"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value7" style="text-align: left">Tachycardia</label>
+          <br />
+          <input
+            type="number"
+            name="value7"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value8" style="text-align: left">Bradycardia</label>
+          <br />
+          <input
+            type="number"
+            name="value8"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value9" style="text-align: left">Cardiacarrest</label>
+          <br />
+          <input
+            type="number"
+            name="value9"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value10" style="text-align: left">Cyanosis</label>
+          <br />
+          <input
+            type="number"
+            name="value10"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+
+          <br />
+          <br />
+          <label for="value11" style="text-align: left">Miosis</label>
+          <br />
+          <input
+            type="number"
+            name="value11"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+          <br />
+          <br />
+          <label for="value12" style="text-align: left"
+            >Electrolyteabnormality</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value12"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+          <br />
+          <br />
+          <label for="value13" style="text-align: left"
+            >Creatinineincreased</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value13"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+          <br />
+          <br />
+          <label for="value14" style="text-align: left"
+            >Reason __Unknown reason</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value14"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
+          <br />
+          <br />
+          <label for="value15" style="text-align: left"
+            >Reason __Unintentional - Therapeutic error</label
+          >
+          <br />
+          <input
+            type="number"
+            name="value15"
+            min="0"
+            max="1"
+            value="0"
+            style="width: 400px; padding-left: 10px; padding-top: 10px"
+          />
         </div>
         <br />
         <div class="col-12 col-sm-12 col-md-7 col-lg-7">
@@ -48,13 +254,6 @@
           {% endif %}
         </div>
       </form>
-      <div class="col-12 col-sm-12 col-md-7 col-lg-7">
-        {% if pred != "a" and pred != "Invalid File"%}
-        <h3 style="text-align: left">Predection is: {{pred}}</h3>
-        {% elif pred == "Invalid File"%}
-        <h3 style="text-align: left">{{pred}}</h3>
-        {% endif %}
-      </div>
     </center>
     <!-- Other required CDNs -->
     <script
